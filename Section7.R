@@ -1,7 +1,7 @@
 # ---  Load and Prepare Data ---
 install.packages("haven")
 library(haven)
-mydata <- read_dta("data/maketable5.dta")
+mydata <- read_dta("/Users/jingxiaorui/Desktop/data/maketable5.dta")
 
 
 # Create the base sample

@@ -16,8 +16,7 @@ ajr_dta <- read_dta("C:/Users/admin/Desktop/maketable2.dta")
 base_sample <- ajr_dta %>% filter(baseco == 1)
 
 # ---  Run All Regressions ---
-# Note on results: The public data has minor differences from the paper's,
-# so coefficients may not match perfectly.
+# Note on results: The public data has minor differences from the paper's, so coefficients may not match perfectly.
 model_list <- list(
   "(1)" = feols(logpgp95 ~ avexpr, data = ajr_dta, se = "hetero"),
   "(2)" = feols(logpgp95 ~ avexpr, data = base_sample, se = "hetero"),

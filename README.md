@@ -36,7 +36,7 @@ Each group member replicated one main table from the original paper:
 | Table 2 | OLS relationship between institutions and income                  | OLS           |
 | Table 4 | IV regressions using settler mortality + first stage              | 2SLS          |
 | Table 5 | IV regressions with additional institutional, legal, and religion controls | 2SLS + OLS |
-| Extension | Robustness Extension Visualization                              | Visualization |
+| Extension | Robustness Extension Visualization                              | Rebustness Check |
 
 
 # R Scripts and Workflow

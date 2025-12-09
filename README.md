@@ -1,4 +1,110 @@
-# econometrics-github-lab
+# Replication Files for Acemoglu, Johnson, and Robinson (2001)
+
+================
+
+This GitHub repository contains the data and R code used to replicate
+selected tables and empirical results from:
+
+Acemoglu, Johnson, and Robinson (2001)
+“The Colonial Origins of Comparative Development: An Empirical Investigation”
+American Economic Review
+
+The goal of this project is to reproduce the main regression tables of the paper.
+Our group of three members each replicated different sections (Table 2, Table 4, and Table 5) of the original paper using publicly available data.
+
+Folder Structure
+
+The recommended folder structure for this replication project is:
+
+Folder	Usage
+code	R scripts for all replications
+data	Original Stata .dta files used in the analysis
+tables	Output regression tables
+output	Additional estimation results
+graphs	(Optional) Figures and visualizations
+Data Files
+
+All datasets are loaded from Stata .dta files corresponding to the original AJR paper:
+
+Data File	Description	Used For
+maketable2.dta	Data used to replicate Table 2 (OLS regressions)	Table 2
+maketable4.dta	Data used to replicate Table 4 (2SLS and first stage)	Table 4
+maketable5.dta	Data used to replicate Table 5 (IV with additional controls)	Table 5
+Replicated Tables and Responsibilities
+
+Each group member replicated one main table from the original paper:
+
+Table	Description	Method
+Table 2	OLS relationship between institutions and income	OLS
+Table 4	IV regressions using settler mortality + first stage	2SLS
+Table 5	IV regressions with additional institutional, legal, and religion controls	2SLS + OLS
+R Scripts and Workflow
+
+All regressions follow the original paper’s specification as closely as possible.
+The full workflow includes:
+
+Table 2 (OLS Replication)
+
+Load maketable2.dta
+
+Construct the base sample
+
+Run:
+
+Bivariate OLS
+
+OLS with latitude
+
+OLS with continent dummies
+
+Output formatted regression table using modelsummary + gt
+
+Table 4 (IV Replication)
+
+Load maketable4.dta
+
+Construct subsamples:
+
+Base sample
+
+Excluding Neo-Europes
+
+Excluding Africa
+
+Panel A: 2SLS regressions
+
+Panel B: First-stage regressions
+
+Panel C: OLS comparisons
+
+Table 5 (IV with Additional Controls)
+
+Load maketable5.dta
+
+Construct:
+
+Base sample
+
+British colonies subsample
+
+Run:
+
+IV regressions with:
+
+Colonial origin controls
+
+Legal origin controls
+
+Religion controls
+
+OLS regressions for comparison
+
+All regression outputs are formatted into publication-style tables.
+
+
+
+
+
 
 
 #loading packages

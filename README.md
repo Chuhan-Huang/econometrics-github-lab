@@ -16,18 +16,12 @@ Our group of three members each replicated different sections (Table 2, Table 4,
 
 The recommended folder structure for this replication project is:
 
-folder_structure <- data.frame(
-  Folder = c("code", "data", "tables", "output", "graphs"),
-  Usage = c(
-    "R scripts for all replications",
-    "Original Stata .dta files used in the analysis",
-    "Output regression tables",
-    "Additional estimation results",
-    "Optional figures and visualizations"
-  )
-)
-
-folder_structure
+Folder	Usage
+code	R scripts for all replications
+data	Original Stata .dta files used in the analysis
+tables	Output regression tables
+output	Additional estimation results
+graphs	(Optional) Figures and visualizations
 
 # Data Files
 

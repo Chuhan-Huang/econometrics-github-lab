@@ -219,7 +219,8 @@ panel_C_models <- list(
 )
 ```
 
-#7 IV Regressions with Additional Controls
+# 7 IV Regressions with Additional Controls
+
 Xiaorui Jing
 
 ## ---  Load and Prepare Data ---

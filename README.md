@@ -117,24 +117,32 @@ modelsummary(
 
   
 
-library(haven)
+Chuhan Huang  
 
+```{r}
+library(haven)
 maketable4 <- read_dta("~/Desktop/maketable4.dta")
 View(maketable4)
+```
 
-# ---  Load and Prepare Data ---
+
+### ---  Load and Prepare Data ---
+```{r}
 ajr_dta <- read_dta("~/Desktop/maketable4.dta")
-
-# Create the base sample and the `other_cont` dummy variable
+```
+### Create the base sample and the `other_cont` dummy variable
+```{r}
 base_sample <- ajr_dta %>%
     filter(baseco == 1) %>%
     mutate(other_cont = if_else(shortnam %in% c("AUS", "MLT", "NZL"), 1, 0))
-
-# Create the required subsamples
+```
+### Create the required subsamples
+```{r}
 no_neo_europes_sample <- base_sample %>% filter(rich4 != 1)
 no_africa_sample      <- base_sample %>% filter(africa != 1)
-
-# ---  Run All IV Regressions ---
+```
+## ---  Run All IV Regressions ---
+```{r}
 iv_models <- list(
     "(1)" = feols(logpgp95 ~ 1 | avexpr ~ logem4, data = base_sample),
     "(2)" = feols(logpgp95 ~ lat_abst | avexpr ~ logem4, data = base_sample),
@@ -149,8 +157,10 @@ iv_models <- list(
 
 install.packages("modelsummary")
 library(modelsummary)
+```
 
-# --- Generate Table for Panel A (2SLS Results) ---
+## --- Generate Table for Panel A (2SLS Results) ---
+```{r}
 install.packages("gt")
 
 modelsummary(
@@ -168,8 +178,9 @@ modelsummary(
   stars = TRUE,
   notes = "Notes: 2SLS estimates with standard errors in parentheses."
 )
-
-# ---  Generate Table for Panel B (First Stage Results) ---
+```
+## ---  Generate Table for Panel B (First Stage Results) ---
+```{r}
 first_stage_models <- purrr::map(iv_models, ~.$iv_first_stage$avexpr)
 
 modelsummary(
@@ -191,8 +202,9 @@ modelsummary(
   stars = TRUE,
   notes = "Notes: First-stage OLS regressions. Dependent variable is Expropriation Risk. Standard errors in parentheses."
 )
-
-# --- Run Regressions for Panel C ---
+```
+## --- Run Regressions for Panel C ---
+```{r}
 panel_C_models <- list(
   "(1)" = feols(logpgp95 ~ avexpr, data = base_sample),
   "(2)" = feols(logpgp95 ~ avexpr + lat_abst, data = base_sample),
@@ -204,6 +216,7 @@ panel_C_models <- list(
   "(8)" = feols(logpgp95 ~ avexpr + lat_abst + africa + asia + other_cont, data = base_sample),
   "(9)" = feols(loghjypl ~ avexpr, data = base_sample)
 )
+```
 
 
 Xiaorui Jing

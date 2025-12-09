@@ -40,8 +40,8 @@ Each group member replicated one main table from the original paper:
 
 
 # R Scripts and Workflow
-
-###loading packages
+## Replication of Table 2
+### loading packages
 ```{r}
 library(haven)
 library(dplyr)

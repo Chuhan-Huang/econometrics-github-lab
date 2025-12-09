@@ -38,25 +38,28 @@ Each group member replicated one main table from the original paper:
 | Table 5 | IV regressions with additional institutional, legal, and religion controls | 2SLS + OLS |
 | Extension | Robustness Extension Visualization                              | Rebustness Check |
 
-```{r}
-# R Scripts and Workflow
 
+# R Scripts and Workflow
+```{r}
 #loading packages
 library(haven)
 library(dplyr)
 library(fixest)
 library(gt)
 library(modelsummary)
-
+```
 # ---  Load Data ---
+```{r}
 ajr_dta <- read_dta("C:/Users/admin/Desktop/maketable2.dta")
-
+```
 
 # ---  Create Data Subsets ---
+```{r}
 base_sample <- ajr_dta %>% filter(baseco == 1)
-
+```
 # ---  Run All Regressions ---
 # Note on results: The public data has minor differences from the paper's, so coefficients may not match perfectly.
+```{r}
 model_list <- list(
   "(1)" = feols(logpgp95 ~ avexpr, data = ajr_dta, se = "hetero"),
   "(2)" = feols(logpgp95 ~ avexpr, data = base_sample, se = "hetero"),
@@ -67,8 +70,10 @@ model_list <- list(
   "(7)" = feols(loghjypl ~ avexpr, data = ajr_dta, se = "hetero"),
   "(8)" = feols(loghjypl ~ avexpr, data = base_sample, se = "hetero")
 )
+```
 
 # ---  Define Table Components ---
+```{r}
 gof_map <- list(
   list("raw" = "nobs", "clean" = "Num. Obs.", "fmt" = 0),
   list("raw" = "r.squared", "clean" = "R-squared", "fmt" = 3)
@@ -105,7 +110,7 @@ modelsummary(
     label = "Dependent variable: Log output per worker, 1988",
     columns = 8:9 # Selects columns for models (7) and (8)
   )
-
+```
 
 
 

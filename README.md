@@ -40,8 +40,9 @@ Each group member replicated one main table from the original paper:
 
 
 # R Scripts and Workflow
-## Replication of Table 2
-### loading packages
+# OLS Regressions
+Yunzhuo Xu
+### --- loading packages ---
 ```{r}
 library(haven)
 library(dplyr)
@@ -116,7 +117,7 @@ modelsummary(
 
 
   
-
+# 2SLS Estimates of Instituitons on Performance
 Chuhan Huang  
 
 ```{r}

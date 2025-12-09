@@ -36,10 +36,13 @@ Data File	Description	Used For
 
 Each group member replicated one main table from the original paper:
 
-<br>Table	Description	Method
-<br>Table 2	OLS relationship between institutions and income	OLS
-<br>Table 4	IV regressions using settler mortality + first stage	2SLS
-<br>Table 5	IV regressions with additional institutional, legal, and religion controls	2SLS + OLS
+| Table | Description                                                         | Method        |
+|-------|---------------------------------------------------------------------|---------------|
+| Table 2 | OLS relationship between institutions and income                  | OLS           |
+| Table 4 | IV regressions using settler mortality + first stage              | 2SLS          |
+| Table 5 | IV regressions with additional institutional, legal, and religion controls | 2SLS + OLS |
+| Extension | Robustness Extension Visualization                              | Visualization |
+
 
 # R Scripts and Workflow
 

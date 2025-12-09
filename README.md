@@ -110,7 +110,7 @@ modelsummary(
 
 
   
-```r
+
 library(haven)
 
 maketable4 <- read_dta("~/Desktop/maketable4.dta")
@@ -200,10 +200,7 @@ panel_C_models <- list(
 )
 
 
-        
-
-
-
+Xiaorui Jing
 
 # ---  Load and Prepare Data ---
 install.packages("haven")

@@ -38,7 +38,7 @@ Each group member replicated one main table from the original paper:
 | Table 5 | IV regressions with additional institutional, legal, and religion controls | 2SLS + OLS |
 | Extension | Robustness Extension Visualization                              | Rebustness Check |
 
-
+```{r}
 # R Scripts and Workflow
 
 #loading packages

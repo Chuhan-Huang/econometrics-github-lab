@@ -28,7 +28,7 @@ graphs	(Optional) Figures and visualizations
 All datasets are loaded from Stata .dta files corresponding to the original AJR paper:
 
 Data File	Description	Used For
-  maketable2.dta	Data used to replicate Table 2 (OLS regressions)	Table 2
+<br>maketable2.dta	Data used to replicate Table 2 (OLS regressions)	Table 2
   maketable4.dta	Data used to replicate Table 4 (2SLS and first stage)	Table 4
   maketable5.dta	Data used to replicate Table 5 (IV with additional controls)	Table 5
 

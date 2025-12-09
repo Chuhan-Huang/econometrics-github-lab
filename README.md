@@ -12,7 +12,7 @@ American Economic Review
 The goal of this project is to reproduce the main regression tables of the paper.
 Our group of three members each replicated different sections (Table 2, Table 4, and Table 5) of the original paper using publicly available data.
 
-Folder Structure
+# Folder Structure
 
 The recommended folder structure for this replication project is:
 
@@ -22,7 +22,8 @@ data	Original Stata .dta files used in the analysis
 tables	Output regression tables
 output	Additional estimation results
 graphs	(Optional) Figures and visualizations
-Data Files
+
+# Data Files
 
 All datasets are loaded from Stata .dta files corresponding to the original AJR paper:
 
@@ -30,7 +31,8 @@ Data File	Description	Used For
 maketable2.dta	Data used to replicate Table 2 (OLS regressions)	Table 2
 maketable4.dta	Data used to replicate Table 4 (2SLS and first stage)	Table 4
 maketable5.dta	Data used to replicate Table 5 (IV with additional controls)	Table 5
-Replicated Tables and Responsibilities
+
+# Replicated Tables and Responsibilities
 
 Each group member replicated one main table from the original paper:
 
@@ -38,7 +40,8 @@ Table	Description	Method
 Table 2	OLS relationship between institutions and income	OLS
 Table 4	IV regressions using settler mortality + first stage	2SLS
 Table 5	IV regressions with additional institutional, legal, and religion controls	2SLS + OLS
-R Scripts and Workflow
+
+# R Scripts and Workflow
 
 All regressions follow the original paper’s specification as closely as possible.
 The full workflow includes:
@@ -103,9 +106,7 @@ All regression outputs are formatted into publication-style tables.
 
 
 
-
-
-
+# Required R Packages
 
 #loading packages
 library(haven)

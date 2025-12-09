@@ -41,7 +41,7 @@ Each group member replicated one main table from the original paper:
 
 # R Scripts and Workflow
 
-#loading packages
+###loading packages
 ```{r}
 library(haven)
 library(dplyr)
@@ -49,17 +49,17 @@ library(fixest)
 library(gt)
 library(modelsummary)
 ```
-# ---  Load Data ---
+### ---  Load Data ---
 ```{r}
 ajr_dta <- read_dta("C:/Users/admin/Desktop/maketable2.dta")
 ```
 
-# ---  Create Data Subsets ---
+### ---  Create Data Subsets ---
 ```{r}
 base_sample <- ajr_dta %>% filter(baseco == 1)
 ```
-# ---  Run All Regressions ---
-# Note on results: The public data has minor differences from the paper's, so coefficients may not match perfectly.
+### ---  Run All Regressions ---
+### Note on results: The public data has minor differences from the paper's, so coefficients may not match perfectly.
 ```{r}
 model_list <- list(
   "(1)" = feols(logpgp95 ~ avexpr, data = ajr_dta, se = "hetero"),
@@ -73,7 +73,7 @@ model_list <- list(
 )
 ```
 
-# ---  Define Table Components ---
+### ---  Define Table Components ---
 ```{r}
 gof_map <- list(
   list("raw" = "nobs", "clean" = "Num. Obs.", "fmt" = 0),

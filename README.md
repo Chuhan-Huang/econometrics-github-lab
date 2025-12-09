@@ -2,35 +2,30 @@
 
 ================
 
-This GitHub repository contains the data and R code used to replicate
-selected tables and empirical results from:
+This GitHub repository contains the data and R code used to replicate selected tables and empirical results from:
 
-<br>Acemoglu, Johnson, and Robinson (2001)
-“The Colonial Origins of Comparative Development: An Empirical Investigation”
-American Economic Review
+> Acemoglu, Johnson, and Robinson (2001).  
+> *“The Colonial Origins of Comparative Development: An Empirical Investigation”*  
+> *American Economic Review*
 
-<br>The goal of this project is to reproduce the main regression tables of the paper.
-Our group of three members each replicated different sections (Table 2, Table 4, and Table 5) of the original paper using publicly available data.
+The goal of this project is to reproduce the main regression tables of the paper. Our group of four members replicated different sections of the original paper—Table 2, Table 4, and Table 5—and also produced a robustness extension visualization using publicly available data.
 
-# Folder Structure
+
+---
+
+## Folder Structure
 
 The recommended folder structure for this replication project is:
 
-Folder	Usage
-<br>code	R scripts for all replications
-<br>data	Original Stata .dta files used in the analysis
-<br>tables	Output regression tables
-<br>output	Additional estimation results
-<br>graphs	(Optional) Figures and visualizations
+| Folder  | Usage                                      |
+|---------|--------------------------------------------|
+| `code`  | R scripts for all replications             |
+| `data`  | Original Stata `.dta` files used in analysis |
+| `tables`| Output regression tables                   |
+| `output`| Additional estimation results              |
+| `graphs`| (Optional) Figures and visualizations      |
 
-# Data Files
 
-All datasets are loaded from Stata .dta files corresponding to the original AJR paper:
-
-Data File	Description	Used For
-<br>maketable2.dta	Data used to replicate Table 2 (OLS regressions)	Table 2
-<br>maketable4.dta	Data used to replicate Table 4 (2SLS and first stage)	Table 4
-<br>maketable5.dta	Data used to replicate Table 5 (IV with additional controls)	Table 5
 
 # Replicated Tables and Responsibilities
 
